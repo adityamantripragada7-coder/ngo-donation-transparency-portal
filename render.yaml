@@ -2,10 +2,9 @@ services:
   - type: web
     name: ngo-donation-transparency-portal
     runtime: static
-    buildCommand: if cd flutter; then git pull && cd ..; else git clone https://github.com/flutter/flutter.git -b stable --depth 1; fi && ./flutter/bin/flutter build web --release
+    buildCommand: git config --global --add safe.directory '*' && if cd flutter; then git pull && cd ..; else git clone https://github.com/flutter/flutter.git -b stable --depth 1; fi && export PATH="$PATH:$(pwd)/flutter/bin" && flutter config --no-analytics && flutter build web --release
     staticPublishPath: build/web
     routes:
       - type: rewrite
         source: /*
         destination: /index.html
-
