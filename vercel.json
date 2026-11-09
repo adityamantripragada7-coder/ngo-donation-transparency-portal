@@ -1,5 +1,5 @@
 {
-  "buildCommand": "git config --global --add safe.directory '*' && if [ -d \"flutter\" ]; then cd flutter && git pull && cd ..; else git clone https://github.com/flutter/flutter.git -b stable --depth 1; fi && export PATH=\"$PATH:$(pwd)/flutter/bin\" && flutter config --no-analytics && flutter build web --release",
+  "buildCommand": "bash build.sh",
   "outputDirectory": "build/web",
   "rewrites": [
     {
