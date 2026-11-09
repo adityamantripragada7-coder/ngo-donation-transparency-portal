@@ -112,7 +112,7 @@ class DonationPortalApp extends StatelessWidget {
           surfaceTintColor: Colors.white,
           centerTitle: false,
         ),
-        cardTheme: CardTheme(
+        cardTheme: CardThemeData(
           color: Colors.white,
           elevation: 0,
           shape: RoundedRectangleBorder(
